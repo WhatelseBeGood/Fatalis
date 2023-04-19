@@ -1,13 +1,16 @@
 <?php
 // connexion à la base de données MySQL
 $servername = "localhost";
-$username = "";
-$password = "";
-$dbname = "";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$config->username = "";
+$config->password = "";
+$config->dbname = "";
 
 if (file_exists(__DIR__ . '/config.local.php')) {
 	require_once(__DIR__ . '/config.local.php');
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
 }
 
 // vérification des données de connexion
