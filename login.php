@@ -1,10 +1,14 @@
 <?php
 // connexion à la base de données MySQL
 $servername = "localhost";
-$username = "admin";
-$password = "S3cr3tC0d3";
-$dbname = "LSPD";
+$username = "";
+$password = "";
+$dbname = "";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+if (file_exists(__DIR__ . '/config.local.php')) {
+	require_once(__DIR__ . '/config.local.php');
+}
 
 // vérification des données de connexion
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
