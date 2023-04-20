@@ -1,4 +1,5 @@
 <?php
+
 // connexion à la base de données MySQL
 require_once('config/config.php');
 
@@ -16,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (mysqli_num_rows($result) == 1) {
 		// authentification réussie
 		session_start();
+		$_SESSION['loggedin'] = true;
 		$_SESSION["username"] = $username;
 		header("location: welcome.php");
 		exit();
