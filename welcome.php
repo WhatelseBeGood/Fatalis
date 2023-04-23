@@ -36,16 +36,42 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 	</script>
 </head>
 <body>
-	<h1>Welcome</h1>
-	<div>
-		<button class="tablink active" onclick="openTab(event, 'users')">Utilisateurs</button>
-		<button class="tablink" onclick="openTab(event, 'reports')">Rapports</button>
-	</div>
-	<div id="users" class="tab active">
+	
+	<table>
+      <tr>
+	 <th></th>
+       <td>Radio : 44.4 Mhz</td>
+		<td>Bonjour, Agent Agent</td>
+	  </tr>
+      <tr>
+        <th><button class="tablink active" onclick="openTab(event, 'users')">Utilisateurs</button></th>
+        <td colspan='2' rowspan='6'><div id="users" class="tab active">
 		<?php include('users.php'); ?>
 	</div>
 	<div id="reports" class="tab">
 		<?php include('rapports.php'); ?>
-	</div>
+	</div></td>
+      </tr>
+      <tr>
+        <th><button class="tablink" onclick="openTab(event, 'reports')">Rapports</button></th>
+      </tr>
+      <tr>
+        <th>Boutton 3</th>
+      </tr>
+      <tr>
+        <th>Boutton 4</th>
+      </tr>
+      <tr>
+        <th>Boutton 5</th>
+      </tr>
+      <tr>
+        <th>Boutton 6</th>
+        
+      </tr>
+      <tr>
+       
+      </tr>
+    </table>
+	
 </body>
 </html>
