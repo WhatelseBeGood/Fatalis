@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		exit();
 	} else {
 		// authentification échouée
+		//echo $username; echo $password;
 		$error = "Nom d'utilisateur ou mot de passe incorrect.";
 	}
 }
